@@ -1,0 +1,38 @@
+# .eslintrc.yml
+
+# Используем конфигурацию для Node.js проектов
+extends:
+  - "eslint:recommended"
+  - "plugin:node/recommended"
+
+# Настройки для парсера и дополнительных функций
+parserOptions:
+  ecmaVersion: 2021 # Версия ECMAScript
+  sourceType: module # Используем модульный стиль
+  ecmaFeatures:
+    impliedStrict: true # Неявный strict mode
+
+# Настройки для игнорирования файлов (если необходимо)
+ignorePatterns:
+  - node_modules/
+  - build/
+
+# Дополнительные плагины (если необходимо)
+plugins:
+  - node
+
+# Настройка окружения
+env:
+  es6: true
+  node: true
+
+# Дополнительные настройки (если необходимо)
+settings:
+  node:
+    tryExtensions:
+      - ".js"
+      - ".json"
+      - ".mjs" # Добавляем .mjs для модулей
+
+# Путь для корневой директории проекта (если необходимо)
+root: true
