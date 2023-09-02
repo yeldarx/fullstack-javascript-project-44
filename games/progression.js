@@ -27,8 +27,6 @@ export const progression = () => {
         
         writeNum = prognum[splicestart];
         
-        console.log("ONLY for asccinema: writeNum is " + writeNum);
-        
         prognum.splice(splicestart, 1, '..');
 
         let input = readlineSync.questionInt(`Question: ${prognum.join(" ")}\nYour answer: `);
